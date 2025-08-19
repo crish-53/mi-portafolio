@@ -1,0 +1,165 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    
+    }
+
+body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #000033;
+
+    }
+
+    /* Barra de navegación */
+.navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 1rem;
+      z-index: 3;
+      
+    }
+
+.navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+
+.navbar a:hover {
+      background-color: #242424;
+      border-radius: 5px;
+    }
+
+.seccion-bienvenida h1 {
+      font-size: 3rem;
+    }
+
+    .logo{
+        width: 80px;
+        border: rgb(201, 201, 201) 2px solid;
+        border-radius: 50%;
+    }
+    /* Enlace perfil */
+/* Padre */
+.seccion-bienvenida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right bottom, #000000, #242424,#3d3d3d,#8d8d8d);
+    color: white;
+    gap: 20px;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* Estilo para el h1 */
+.seccion-bienvenida h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+/* description */
+section p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/*enlace con borde animado */
+
+.seccion-bienvenida .boton {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Borde animado */
+.seccion-bienvenida .boton::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 8px;
+    background: linear-gradient(270deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    filter: blur(5px);
+    background-size: 600% 600%;
+    animation: gradiente 6s linear infinite;
+    z-index: -1;
+}
+
+/* Fondo interno */
+.seccion-bienvenida .boton::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 6px;
+    background: #111;
+    z-index: -1;
+}
+
+/* Animación */
+@keyframes gradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hover */
+.seccion-bienvenida .boton:hover {
+    color: #8d8d8d;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+    /* Sección de proyectos */
+
+.contenedor-proyectos {
+      background-color: #8d8d8d;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(3 , 1fr); 
+      grid-template-rows: repeat(3 , auto);
+      align-items: center ;
+      justify-content: space-around;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+
+.proyecto-1, .proyecto-2, .proyecto-3, .proyecto-4, .proyecto-5, .proyecto-6 {
+      background-color: #000000;
+      margin: 0.5rem ;
+      padding: 0.5rem;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+.proyecto-1 a, .proyecto-2 a, .proyecto-3 a, .proyecto-4 a, .proyecto-5 a, .proyecto-6 a{
+      color: #8c8d95;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+.proyecto-1 a:hover, .proyecto-2 a:hover, .proyecto-3 a:hover,.proyecto-4 a:hover, .proyecto-5 a:hover, .proyecto-6 a:hover {
+      text-decoration: underline;
+    }
