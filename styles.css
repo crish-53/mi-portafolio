@@ -207,5 +207,8 @@ quitar margenes del navbar  y poner footer con contactos
 
 .footer{
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
